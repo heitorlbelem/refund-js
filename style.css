@@ -146,4 +146,52 @@ button[type='submit'] {
 
 aside {
   width: 55%;
+
+  & header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 3.2rem;
+    border-bottom: 1px solid var(--gray-400);
+
+    & p {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+
+      font-size: 1.6rem;
+      font-weight: normal;
+      line-height: 1.5;
+      color: var(--gray-200);
+
+      & i {
+        color: var(--gray-300);   
+      }
+
+      & span {
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.2;
+
+        text-transform: uppercase;
+      }
+    }
+
+    & h2 {
+      display: flex;
+      align-items: baseline;
+      gap: .4rem;
+
+      font-size: 1.6rem;
+      line-height: 1.5;
+      color: var(--gray-100);
+
+      & small {
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 1.2;
+      }
+    }
+  }
 }
