@@ -251,3 +251,41 @@ aside {
     }
   }
 }
+
+@media (width < 1440px) {
+  main {
+    padding: 2rem;
+
+    & div {
+      flex-direction: column;
+    }
+
+    section, aside {
+      width: 100%;
+    }
+
+    & .inputs-row {
+      & fieldset:nth-child(1) {
+        width: 100%;
+      }
+
+      & fieldset:nth-child(2) {
+        width: 100%;
+      }
+    }
+  }
+
+  aside {
+    & header {
+      p {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        & i {
+          display: none;
+        }
+      }
+    }
+  }
+}
