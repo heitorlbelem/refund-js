@@ -12,53 +12,62 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-  
   <main>
     <img src="assets/logo.svg" alt="">
 
-    <div class="main-container">
-      <div class="refund-request box">
+    <div>
+      <section>
         <h1>Solicitação de reembolso</h1>
         <p>
           Informe os dados da despesa para solicitar reembolso.<br>
           A despesa será analisada e reembolsada em até 30 dias.
         </p>
-
         <form>
-          <div class="wrapper">
-            <label for="title">Título da despesa</label>
+          <fieldset>
+            <legend>Título da despesa</legend>
             <input type="text" name="title" id="title"/>
+          </fieldset>
+
+          <div class="inputs-row">
+            <fieldset>
+              <legend>Categoria</legend>
+              <select name="category" id="category">
+                <option value="" disabled selected hidden>Selecione</option>
+                <option value="food">Alimentação</option>
+                <option value="accommodation">Hospedagem</option>
+                <option value="services">Serviços</option>
+                <option value="transport">Transporte</option>
+                <option value="others">Outros</option>
+              </select>
+            </fieldset>
+
+            <fieldset>
+              <legend>Valor da despesa</legend>
+              <input
+                type="text"
+                name="amount"
+                id="amount"
+                placeholder="0,00"
+                required
+              />
+            </fieldset>
           </div>
 
-          <div class="wrapper">
-            <label for="category">Categoria</label>
-            <select name="category" id="category">
-              <option value="">Selecione</option>
-            </select>
-          </div>
-
-          <div class="wrapper">
-            <label for="amount">Valor</label>
-            <input type="text" id="amount" name="amount" placeholder="0,00"/>
-          </div>
-
-          <button>Adicionar despesa</button>
+          <button type="submit">Adicionar despesa</button>
         </form>
-      </div>
+      </section>
 
-      <div class="my-requests box">
+      <aside>
         <header>
-          <div>
-            <h2>Minhas solicitações</h2>
+          <p>
+            Minhas solicitações
+            <i>&bullet;</i>
             <span>6 despesas</span>
-          </div>
+          </p>
 
-          <div id="total">
-            <span>R$</span>
-            <strong>1.420,57</strong>
-          </div>
+          <h2> <small>R$</small> 1.420,57 </h2>
         </header>
-      </div>
+      </aside>
     </div>
   </main>
 </body>
