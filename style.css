@@ -220,6 +220,8 @@ aside {
     min-height: 31rem;
     max-height: 31rem;
 
+    overflow-y: scroll;
+
     & li {
       display: flex;
       align-items: center;
